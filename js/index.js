@@ -1,0 +1,1 @@
+navBarHeadings = document.querySelectorAll('#drop');

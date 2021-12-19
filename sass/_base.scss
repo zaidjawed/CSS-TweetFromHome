@@ -1,0 +1,64 @@
+//COLORS
+$color-primary : #39A2DB;
+$color-secondary: #0a4b78;
+
+$color-gray-dark : rgb(75, 75, 75);
+$color-gray-dark-1 : #151A1E;
+
+$color-gray-light: rgb(155, 155, 155);
+
+// FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+$font-display: 'Ubuntu', sans-serif;
+
+// BREAKPOINT
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+@mixin respond($breakpoint) {
+   @media only screen and (max-width: $breakpoint/16 + em) { @content };
+ }
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+   position: relative;
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+   font-family: $font-display;
+}
+
+button {
+   outline: none;
+   border-radius: 5px;
+   cursor: pointer;
+
+   &:focus, &:hover {
+      outline: none;
+   }
+}
+
+a {
+   text-decoration: none;
+}

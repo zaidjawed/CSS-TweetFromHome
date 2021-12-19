@@ -1,0 +1,47 @@
+.navbar-container {
+   position: relative;
+   padding: 3rem 10rem;
+
+   @include respond(900) {
+      padding: 3rem 5rem;
+   }
+
+   @include respond(500) {
+      padding: 3rem 2rem;
+   }
+}
+
+.header-container {
+   padding: 0 10rem;
+   height: 100vh;
+
+   @include respond(900) {
+      padding: 0 5rem;
+      height: 500px;
+   }
+}
+
+.body-container {
+   position: relative;
+   padding: 0 12rem;
+
+   margin-bottom: 10rem;
+
+   @include respond(900) {
+      padding: 0 5rem;
+   }
+}
+
+.footer-container {
+   position: relative;
+   padding: 0 10rem;
+   padding-bottom: 2rem;
+
+   @include respond(900) {
+      padding: 0 5rem;
+   }
+
+   @include respond(500) {
+      padding: 0 2rem;
+   }
+}

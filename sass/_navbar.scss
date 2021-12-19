@@ -1,0 +1,50 @@
+.navbar {
+   color: $color-primary;
+   font-size: 1.8rem;
+
+   &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__logo {
+      font-size: 1.8rem;
+   }
+
+   &__link {
+      color: inherit;
+      font-weight: 700;
+      margin-right: 3rem;
+   }
+
+   &__btns {
+      @include respond(1200) {
+         display: none;
+      }
+   }
+
+   &__btn {
+      color: #fff;
+      font-weight: 700;
+      background-image: linear-gradient(to right, $color-secondary, $color-primary);
+      padding: 1rem 7rem;
+      border-radius: 45px;
+   }
+
+   &__toggle {
+      display: none;
+
+      a {
+         color: inherit;
+      }
+      
+      i {
+         font-size: 2.5rem;
+      }
+
+      @include respond(1200) {
+         display: block;
+      }
+   }
+}

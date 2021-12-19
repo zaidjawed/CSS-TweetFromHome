@@ -1,0 +1,131 @@
+.body {
+   color: $color-secondary;
+
+   &__heading {
+      color: #0a4b78;
+      text-align: center;
+      font-size: 6rem;
+      font-weight: 800;
+
+      span {
+         color: $color-primary;
+      }
+
+      @include respond(900) {
+         font-size: 3rem;
+      }
+   }
+
+   &__box {
+      position: relative;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 15rem;
+
+      @include respond(900) {
+         flex-direction: column;
+         padding-top: 5rem;
+         align-items: center;
+      }
+   }
+
+   &__img-box {
+      min-width: 280px;
+      width: 280px;
+      height: 500px;
+      background: $color-primary;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+   }
+
+   &__img-box-1 {
+      width: 100%;
+      height: 500px;
+      background: $color-primary;
+      margin-left: -5px;
+      margin-top: -5px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+   }
+
+   &__img {
+      min-width: 280px;
+      width: 100%;
+      height: 500px;
+      margin-left: -5px;
+      margin-top: -5px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+   }
+
+   &__p {
+      text-align: right;
+      color: $color-primary;
+      font-size: 2rem;
+      font-weight: 800;
+
+      @include respond(900) {
+         text-align: center;
+         font-size: 3rem;
+         margin-top: 2rem;
+      }
+
+      @include respond(500) {
+         font-size: 2rem;
+      }
+   }
+
+   &__title {
+      color: $color-gray-dark;
+      text-align: right;
+      font-size: 4.5rem;
+      font-weight: 400;
+
+      @include respond(900) {
+         text-align: center;
+         font-size: 3rem;
+         margin-bottom: 2rem;
+      }
+
+      @include respond(500) {
+         font-size: 2rem;
+      }
+   }
+
+   &__tags {
+      text-align: right;
+      margin-bottom: 2rem;
+
+      @include respond(900) {
+         text-align: center;
+      }
+
+      @include respond(500) {
+         margin-bottom: 1rem;
+      }
+   }
+
+   &__tag {
+      color: $color-gray-dark-1;
+      display: inline-block;
+      padding: 0.2rem 4rem;
+      border-radius: 45px;
+      font-size: 1.8rem;
+      margin-right: 1rem;
+
+      @include respond(500) {
+         margin-top: 1rem;
+      }
+   }
+
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100vh;
+      width: 100vw;
+
+      background-image: linear-gradient(to bottom, rgba($color-primary,0.2) 10%, rgba(255,255,255,0.2) 90%);
+      clip-path: polygon(47% 3%, 100% 4%, 100% 100%, 21% 100%);
+   }
+}

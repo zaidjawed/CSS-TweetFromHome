@@ -1,0 +1,154 @@
+.header {
+   position: relative;
+   color: $color-secondary;
+
+   &__heading {
+      font-size: 4.5rem;
+      font-weight: 800;
+
+      span {
+         color: $color-primary;
+      }
+   }
+
+   &__text-box {
+      position: relative;
+      z-index: 50;
+      width: 700px;
+      margin-bottom: 6rem;
+      padding-top: 13rem;
+   }
+
+   &__p {
+      font-size: 2rem;
+      color: $color-gray-light;
+      font-family: $font-display;
+   }
+
+   &__input-box {
+      position: relative;
+      z-index: 50;
+      margin-bottom: 6rem;
+   }
+
+   label {
+      position: absolute;
+      left: 5px;
+      bottom: 4px;
+      font-size: 2.5rem;
+      color: rgba($color-gray-light,0.8);
+      opacity: 0;
+   }
+
+   &__input {
+      width: 500px;
+      border: none;
+      border-bottom: 2px solid rgba($color-primary,0.5);
+      outline: none;
+      font-size: 1.8rem;
+      color: $color-gray-light;
+      padding: 1rem 0;
+      padding-left: 4rem;
+      border-radius: 5px;
+      background: transparent;
+
+      &::placeholder {
+         font-size: 2.5rem;
+         color: rgba($color-gray-light,0.8);
+      }
+
+      &:hover, &:focus {
+         outline: none;
+      }
+   }
+
+   input:placeholder-shown ~ label {
+      opacity: 1;
+   }
+
+   &__btn-box {
+      position: relative;
+      z-index: 50;
+      margin-top: 5rem;
+   }
+
+   &__btn {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: rgba($color-primary,0.8);
+      padding: 1.5rem 4rem;
+      border-radius: 45px;
+   }
+
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      height: 100vh;
+      width: 100vw;
+      background-image: linear-gradient(to top, rgba($color-primary,0.2) 10%, rgba(255,255,255,0.2) 90%);
+      clip-path: polygon(0 0, 80% 0%, 54% 96%, 0% 100%);
+
+      @include respond(900) {
+         height: 100%;
+      }
+   }
+
+   &__bg1 {
+      position: absolute;
+      z-index: 1;
+      width: 500px;
+      height: 300px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+      top: 50%;
+      left: 50%;
+      transform: translate(20%, -50%) rotate(-15deg);
+
+      @include respond(1200) {
+         top: 50%;
+         right: 50%;
+         transform: translate(-40%, -40%) rotate(-15deg);
+      }
+
+      @include respond(800) {
+         top: 40%;
+         right: 50%;
+         width: 80%;
+         height: auto;
+      }
+   }
+
+   &__bg2 {
+      position: absolute;
+      z-index: 2;
+      width: 500px;
+      height: 300px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+      top: 50%;
+      left: 50%;
+      transform: translate(10%, -60%) rotate(-15deg);
+
+      @include respond(1200) {
+         top: 50%;
+         right: 50%;
+         transform: translate(-50%, -50%) rotate(-15deg);
+      }
+
+      @include respond(800) {
+         top: 40%;
+         right: 50%;
+         width: 80%;
+         height: auto;
+      }
+   }
+
+   &__toggle {
+      @include respond(900){
+         display: none;
+      }
+   }
+}
